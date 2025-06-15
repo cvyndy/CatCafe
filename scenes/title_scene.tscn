@@ -1,13 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtyc57ohk5pen"]
-
-[ext_resource type="Script" path="res://title_scene.gd" id="1_e6n7u"]
+[gd_scene format=3 uid="uid://dtyc57ohk5pen"]
 
 [node name="Title Scene" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 654.0
-script = ExtResource("1_e6n7u")
 
 [node name="Start" type="Button" parent="."]
 layout_mode = 1
