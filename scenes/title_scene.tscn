@@ -1,10 +1,27 @@
-[gd_scene format=3 uid="uid://dtyc57ohk5pen"]
+[gd_scene load_steps=2 format=3 uid="uid://dtyc57ohk5pen"]
+
+[sub_resource type="GDScript" id="GDScript_8r442"]
+script/source = "extends Control
+
+func hi():
+	print(\"Cindy\")
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	print(\"Justin is the goat\")
+	pass # Replace with function body.
+
+func _on_start_pressed():
+	get_tree().change_scene_to_file('res://scenes/main.tscn')
+	pass # Replace with function body.
+"
 
 [node name="Title Scene" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 654.0
+script = SubResource("GDScript_8r442")
 
 [node name="Start" type="Button" parent="."]
 layout_mode = 1
