@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cs64q3dthwl10"]
+[gd_scene load_steps=4 format=3 uid="uid://cs64q3dthwl10"]
 
 [ext_resource type="Script" path="res://scripts/GachaPull.gd" id="1_bgyhv"]
+[ext_resource type="Texture2D" uid="uid://c306vgoa786h2" path="res://assets/tempcatjesus.png" id="2_48ubn"]
 [ext_resource type="Texture2D" uid="uid://bnvmnmlsvkwhg" path="res://assets/exit.png" id="2_e74ed"]
 
 [node name="GachaPull" type="Node2D"]
@@ -9,6 +10,7 @@ script = ExtResource("1_bgyhv")
 [node name="background" type="TextureRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 645.0
+texture = ExtResource("2_48ubn")
 
 [node name="exit" type="Button" parent="background"]
 layout_mode = 1
@@ -24,11 +26,14 @@ expand_icon = true
 
 [node name="fivepull" type="Button" parent="background"]
 layout_mode = 0
-offset_left = 681.0
-offset_top = 415.0
-offset_right = 849.0
-offset_bottom = 478.0
+offset_left = 100.0
+offset_top = 412.0
+offset_right = 434.0
+offset_bottom = 579.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
 text = "5 pull"
+flat = true
 
 [node name="onepull" type="Button" parent="background"]
 layout_mode = 1
@@ -37,12 +42,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -259.0
-offset_top = 94.5
-offset_right = -90.0
-offset_bottom = 156.5
+offset_left = 143.0
+offset_top = 101.0
+offset_right = 482.0
+offset_bottom = 257.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
 text = "1 Pull"
+flat = true
 
 [connection signal="pressed" from="background/exit" to="." method="_on_exit_pressed"]

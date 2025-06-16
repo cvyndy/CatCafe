@@ -1,43 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://046m2wbydl52"]
+[gd_scene load_steps=7 format=3 uid="uid://046m2wbydl52"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_swe6d"]
-[ext_resource type="Texture2D" uid="uid://dc3ib63lkru8h" path="res://assets/krish.jpg" id="2_ohujw"]
+[ext_resource type="Texture2D" uid="uid://cw88rq4vjs445" path="res://assets/maincafetemp.png" id="2_ip5sg"]
 [ext_resource type="Texture2D" uid="uid://ccd2v4m8pklmu" path="res://assets/game-coin.png" id="3_2om1q"]
 [ext_resource type="Texture2D" uid="uid://kjqak4nr8k57" path="res://assets/laptop.png" id="4_b2myt"]
+[ext_resource type="Texture2D" uid="uid://barrlr04t3qa4" path="res://assets/money.png" id="5_7x01h"]
+
+[sub_resource type="Theme" id="Theme_lgbyf"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_swe6d")
 
-[node name="krishbrrr" type="Button" parent="."]
-offset_left = 379.0
-offset_top = 99.0
-offset_right = 773.0
-offset_bottom = 503.0
-icon = ExtResource("2_ohujw")
-flat = true
-expand_icon = true
+[node name="background" type="TextureRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 648.0
+texture = ExtResource("2_ip5sg")
+metadata/_edit_lock_ = true
 
-[node name="daybg" type="PanelContainer" parent="."]
+[node name="DayLabel" type="Label" parent="."]
 offset_left = 24.0
-offset_top = 21.0
-offset_right = 164.0
-offset_bottom = 64.0
-
-[node name="DayLabel" type="Label" parent="daybg"]
-layout_mode = 2
+offset_top = 43.0
+offset_right = 321.0
+offset_bottom = 105.0
 size_flags_vertical = 1
+theme = SubResource("Theme_lgbyf")
+theme_override_font_sizes/font_size = 25
 text = "Day 1"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Gacha" type="Button" parent="."]
-offset_left = 1085.0
-offset_top = 2.0
-offset_right = 1146.0
-offset_bottom = 66.0
-icon = ExtResource("3_2om1q")
-flat = true
-expand_icon = true
 
 [node name="Laptop" type="Button" parent="."]
 offset_left = 1027.0
@@ -48,5 +38,28 @@ icon = ExtResource("4_b2myt")
 flat = true
 expand_icon = true
 
-[connection signal="pressed" from="Gacha" to="." method="_on_gacha_pressed"]
+[node name="Label" type="Label" parent="."]
+offset_left = 89.0
+offset_top = 134.0
+offset_right = 177.0
+offset_bottom = 173.0
+theme_override_font_sizes/font_size = 25
+text = "10
+"
+
+[node name="gacha" type="Button" parent="."]
+offset_left = 1090.0
+offset_top = 7.0
+offset_right = 1150.0
+offset_bottom = 73.0
+icon = ExtResource("5_7x01h")
+flat = true
+expand_icon = true
+
+[node name="Game-coin" type="Sprite2D" parent="."]
+position = Vector2(67, 153)
+scale = Vector2(0.0966797, 0.0869141)
+texture = ExtResource("3_2om1q")
+
 [connection signal="pressed" from="Laptop" to="." method="_on_laptop_pressed"]
+[connection signal="pressed" from="gacha" to="." method="_on_gacha_pressed"]
