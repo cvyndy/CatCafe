@@ -2,7 +2,7 @@ extends Control
 
 func hi():
 	print("Cindy")
-
+	print("Krish")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("Justin is the goat")
