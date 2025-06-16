@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc3ib63lkru8h"
-path="res://.godot/imported/krish.jpg-979bdb4dc52f69a05e3ebee9525ddd50.ctex"
+uid="uid://barrlr04t3qa4"
+path="res://.godot/imported/money.png-2ec49a69b4dd4ebd96bd669e726aa59f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/krish.jpg"
-dest_files=["res://.godot/imported/krish.jpg-979bdb4dc52f69a05e3ebee9525ddd50.ctex"]
+source_file="res://assets/money.png"
+dest_files=["res://.godot/imported/money.png-2ec49a69b4dd4ebd96bd669e726aa59f.ctex"]
 
 [params]
 
