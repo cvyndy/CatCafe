@@ -1,15 +1,52 @@
-[gd_scene load_steps=3 format=3 uid="uid://046m2wbydl52"]
+[gd_scene load_steps=5 format=3 uid="uid://046m2wbydl52"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_swe6d"]
-[ext_resource type="Texture2D" uid="uid://dc3ib63lkru8h" path="res://assets/New folder/krish.jpg" id="2_5jt63"]
+[ext_resource type="Texture2D" uid="uid://dc3ib63lkru8h" path="res://assets/krish.jpg" id="2_ohujw"]
+[ext_resource type="Texture2D" uid="uid://ccd2v4m8pklmu" path="res://assets/game-coin.png" id="3_2om1q"]
+[ext_resource type="Texture2D" uid="uid://kjqak4nr8k57" path="res://assets/laptop.png" id="4_b2myt"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_swe6d")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 307.0
-offset_top = 104.0
-offset_right = 795.0
-offset_bottom = 592.0
-icon = ExtResource("2_5jt63")
+[node name="krishbrrr" type="Button" parent="."]
+offset_left = 379.0
+offset_top = 99.0
+offset_right = 773.0
+offset_bottom = 503.0
+icon = ExtResource("2_ohujw")
 flat = true
+expand_icon = true
+
+[node name="daybg" type="PanelContainer" parent="."]
+offset_left = 24.0
+offset_top = 21.0
+offset_right = 164.0
+offset_bottom = 64.0
+
+[node name="DayLabel" type="Label" parent="daybg"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Day 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gacha" type="Button" parent="."]
+offset_left = 1085.0
+offset_top = 2.0
+offset_right = 1146.0
+offset_bottom = 66.0
+icon = ExtResource("3_2om1q")
+flat = true
+expand_icon = true
+
+[node name="Laptop" type="Button" parent="."]
+offset_left = 1027.0
+offset_top = 3.0
+offset_right = 1088.0
+offset_bottom = 62.0
+icon = ExtResource("4_b2myt")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="Gacha" to="." method="_on_gacha_pressed"]
+[connection signal="pressed" from="Laptop" to="." method="_on_laptop_pressed"]
