@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs64q3dthwl10"]
+
+[ext_resource type="Script" path="res://scripts/GachaPull.gd" id="1_bgyhv"]
+[ext_resource type="Texture2D" uid="uid://bnvmnmlsvkwhg" path="res://assets/exit.png" id="2_e74ed"]
+
+[node name="GachaPull" type="Node2D"]
+script = ExtResource("1_bgyhv")
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 645.0
+
+[node name="exit" type="Button" parent="background"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -45.0
+offset_bottom = 46.0
+grow_horizontal = 0
+icon = ExtResource("2_e74ed")
+flat = true
+expand_icon = true
+
+[node name="fivepull" type="Button" parent="background"]
+layout_mode = 0
+offset_left = 681.0
+offset_top = 415.0
+offset_right = 849.0
+offset_bottom = 478.0
+text = "5 pull"
+
+[node name="onepull" type="Button" parent="background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.0
+offset_top = 94.5
+offset_right = -90.0
+offset_bottom = 156.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "1 Pull"
+
+[connection signal="pressed" from="background/exit" to="." method="_on_exit_pressed"]
