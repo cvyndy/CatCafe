@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://046m2wbydl52"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_swe6d"]
-[ext_resource type="Texture2D" uid="uid://cw88rq4vjs445" path="res://assets/maincafetemp.png" id="2_ip5sg"]
+[ext_resource type="Texture2D" uid="uid://bxiydkywmfv6q" path="res://assets/maintemp.png" id="2_8ofu4"]
 [ext_resource type="Texture2D" uid="uid://ccd2v4m8pklmu" path="res://assets/game-coin.png" id="3_2om1q"]
 [ext_resource type="Texture2D" uid="uid://kjqak4nr8k57" path="res://assets/laptop.png" id="4_b2myt"]
 [ext_resource type="Texture2D" uid="uid://barrlr04t3qa4" path="res://assets/money.png" id="5_7x01h"]
@@ -14,7 +14,7 @@ script = ExtResource("1_swe6d")
 [node name="background" type="TextureRect" parent="."]
 offset_right = 1153.0
 offset_bottom = 648.0
-texture = ExtResource("2_ip5sg")
+texture = ExtResource("2_8ofu4")
 metadata/_edit_lock_ = true
 
 [node name="DayLabel" type="Label" parent="."]
@@ -60,6 +60,14 @@ expand_icon = true
 position = Vector2(67, 153)
 scale = Vector2(0.0966797, 0.0869141)
 texture = ExtResource("3_2om1q")
+
+[node name="Next" type="Button" parent="."]
+visible = false
+offset_left = 18.0
+offset_top = 513.0
+offset_right = 217.0
+offset_bottom = 598.0
+text = "Next"
 
 [connection signal="pressed" from="Laptop" to="." method="_on_laptop_pressed"]
 [connection signal="pressed" from="gacha" to="." method="_on_gacha_pressed"]
