@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c6hf0xmcf7p8u"]
 
-[ext_resource type="Script" path="res://scripts/LaptopMenu.gd" id="1_bg1ju"]
+[ext_resource type="Script" uid="uid://cg8bht823gk84" path="res://scripts/LaptopMenu.gd" id="1_bg1ju"]
 [ext_resource type="Texture2D" uid="uid://chkwltoo3ss0t" path="res://assets/vecteezy_browser-window-mockup-modern-internet-page_5429687.png" id="2_lkukt"]
 
 [node name="LaptopMenu" type="Control"]
@@ -43,6 +43,7 @@ offset_top = 135.0
 offset_right = 865.5
 offset_bottom = 164.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "KrishSimps4Catgirls.com"
+text = "CatKart.org
+"
 
 [connection signal="pressed" from="TextureRect/exit" to="." method="_on_exit_pressed"]

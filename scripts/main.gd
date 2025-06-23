@@ -17,4 +17,3 @@ func _on_laptop_pressed():
 func _on_gacha_pressed():
 	get_tree().change_scene_to_file('res://scenes/gacha_pull.tscn')
 	pass # Replace with function body.
-
