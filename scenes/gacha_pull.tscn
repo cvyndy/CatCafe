@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cs64q3dthwl10"]
 
-[ext_resource type="Script" uid="uid://dkes1xjtunxu5" path="res://scripts/GachaPull.gd" id="1_bgyhv"]
+[ext_resource type="Script" path="res://scripts/GachaPull.gd" id="1_bgyhv"]
 [ext_resource type="Texture2D" uid="uid://c306vgoa786h2" path="res://assets/tempcatjesus.png" id="2_48ubn"]
 [ext_resource type="Texture2D" uid="uid://bnvmnmlsvkwhg" path="res://assets/exit.png" id="2_e74ed"]
 

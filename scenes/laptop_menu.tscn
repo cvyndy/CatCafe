@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c6hf0xmcf7p8u"]
 
-[ext_resource type="Script" uid="uid://cg8bht823gk84" path="res://scripts/LaptopMenu.gd" id="1_bg1ju"]
+[ext_resource type="Script" path="res://scripts/LaptopMenu.gd" id="1_bg1ju"]
 [ext_resource type="Texture2D" uid="uid://chkwltoo3ss0t" path="res://assets/vecteezy_browser-window-mockup-modern-internet-page_5429687.png" id="2_lkukt"]
 
 [node name="LaptopMenu" type="Control"]
