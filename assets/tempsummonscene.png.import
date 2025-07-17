@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kjqak4nr8k57"
-path="res://.godot/imported/laptop.png-8b75e18deb8cafe3f6587e4169b3e4d6.ctex"
+uid="uid://dveoy606dvvmi"
+path="res://.godot/imported/tempsummonscene.png-48e860150a423a5a1316bc31c9db5dcf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/laptop.png"
-dest_files=["res://.godot/imported/laptop.png-8b75e18deb8cafe3f6587e4169b3e4d6.ctex"]
+source_file="res://assets/tempsummonscene.png"
+dest_files=["res://.godot/imported/tempsummonscene.png-48e860150a423a5a1316bc31c9db5dcf.ctex"]
 
 [params]
 

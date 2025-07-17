@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GachaItem" load_steps=2 format=3 uid="uid://dp3kby604m2sj"]
+
+[ext_resource type="Script" uid="uid://b1seyinob8tlr" path="res://resources/items.gd" id="1_w53iv"]
+
+[resource]
+script = ExtResource("1_w53iv")
+name = "dirt"
+type = "junk"
+rarity = "trash"
+probability = 0.4

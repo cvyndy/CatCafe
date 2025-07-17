@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh81jiyumrpq2"]
+
+[ext_resource type="Script" uid="uid://evyiqjo7um2w" path="res://scripts/Summoning.gd" id="1_ua237"]
+[ext_resource type="Texture2D" uid="uid://dveoy606dvvmi" path="res://assets/tempsummonscene.png" id="2_vkoi6"]
+
+[node name="Summoning" type="Node2D"]
+script = ExtResource("1_ua237")
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 651.0
+texture = ExtResource("2_vkoi6")
+metadata/_edit_use_anchors_ = true
+
+[node name="next" type="Button" parent="."]
+visible = false
+offset_left = 768.0
+offset_top = 363.0
+offset_right = 929.0
+offset_bottom = 423.0
+text = "NEXT"
+
+[node name="pulls" type="Label" parent="."]
+offset_left = 478.0
+offset_top = 230.0
+offset_right = 706.0
+offset_bottom = 291.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Items"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="next" to="." method="_on_next_pressed"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GachaItem" load_steps=2 format=3 uid="uid://ygfr0vcldnk4"]
+
+[ext_resource type="Script" uid="uid://b1seyinob8tlr" path="res://resources/items.gd" id="1_jh567"]
+
+[resource]
+script = ExtResource("1_jh567")
+name = "mouse"
+type = "toy"
+rarity = "normal"
+probability = 0.25

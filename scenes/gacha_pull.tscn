@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cs64q3dthwl10"]
 
-[ext_resource type="Script" path="res://scripts/GachaPull.gd" id="1_bgyhv"]
+[ext_resource type="Script" uid="uid://dkes1xjtunxu5" path="res://scripts/GachaPull.gd" id="1_bgyhv"]
 [ext_resource type="Texture2D" uid="uid://c306vgoa786h2" path="res://assets/tempcatjesus.png" id="2_48ubn"]
 [ext_resource type="Texture2D" uid="uid://bnvmnmlsvkwhg" path="res://assets/exit.png" id="2_e74ed"]
 
@@ -53,4 +53,15 @@ theme_override_font_sizes/font_size = 80
 text = "1 Pull"
 flat = true
 
+[node name="coinsLabel" type="Label" parent="."]
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 232.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Coins:"
+
 [connection signal="pressed" from="background/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="background/fivepull" to="." method="_on_fivepull_pressed"]
+[connection signal="pressed" from="background/onepull" to="." method="_on_onepull_pressed"]

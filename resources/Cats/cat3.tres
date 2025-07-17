@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GachaItem" load_steps=2 format=3 uid="uid://d0116ibtppl56"]
+
+[ext_resource type="Script" uid="uid://b1seyinob8tlr" path="res://resources/items.gd" id="1_2vwdg"]
+
+[resource]
+script = ExtResource("1_2vwdg")
+name = "cat3"
+type = "cat"
+rarity = "meme"
+probability = 0.01

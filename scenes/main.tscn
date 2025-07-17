@@ -1,17 +1,322 @@
-[gd_scene format=3 uid="uid://b0xqavk6teq85"]
+[gd_scene load_steps=18 format=3 uid="uid://3jnrsm2qs7td"]
 
-[node name="main" type="Node2D"]
+[ext_resource type="Script" uid="uid://bai0akwuk53r0" path="res://scripts/main.gd" id="1_vi4dn"]
+[ext_resource type="Texture2D" uid="uid://drrxl1fsxt2yx" path="res://assets/scene without lights.jpg" id="2_3h6t3"]
+[ext_resource type="FontFile" uid="uid://c0f2xihts6i7l" path="res://assets/fonts/DkCrayonCrumble-ddll.ttf" id="3_ho0j1"]
+[ext_resource type="Texture2D" uid="uid://dgu751tjvx4r8" path="res://assets/flower lights ONLY.PNG" id="4_7a625"]
+[ext_resource type="Texture2D" uid="uid://c4cporl3i1lpq" path="res://assets/light fixtures off.png" id="4_uy45k"]
+[ext_resource type="Texture2D" uid="uid://b415ir517xe12" path="res://assets/cat_box_3.png" id="5_5vsvq"]
 
-[node name="laptop" type="Button" parent="."]
-offset_left = 960.0
-offset_top = 2.0
-offset_right = 1054.0
-offset_bottom = 68.0
-text = "Laptop"
+[sub_resource type="Animation" id="Animation_iva4p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lightson:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("light1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(117, -439)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("light2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(666, -488)]
+}
+
+[sub_resource type="Animation" id="Animation_x0m05"]
+resource_name = "off_on"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lightson:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.00392157, 0.00392157, 0.00392157, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hmkvt"]
+resource_name = "on_off"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lightson:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ya08t"]
+resource_name = "sunlight"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("light1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(117, -439), Vector2(138, 213)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("light2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(666, -488), Vector2(597, 173)]
+}
+
+[sub_resource type="Animation" id="Animation_go3sb"]
+resource_name = "sunset"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("light1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(125.1, 174.8), Vector2(120, -475)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("light2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(603.9, 106.9), Vector2(640, -528)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iq8ft"]
+_data = {
+&"RESET": SubResource("Animation_iva4p"),
+&"off_on": SubResource("Animation_x0m05"),
+&"on_off": SubResource("Animation_hmkvt"),
+&"sunlight": SubResource("Animation_ya08t"),
+&"sunset": SubResource("Animation_go3sb")
+}
+
+[sub_resource type="Gradient" id="Gradient_jq236"]
+offsets = PackedFloat32Array(0, 0.703704)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jhgns"]
+gradient = SubResource("Gradient_jq236")
+fill = 1
+fill_from = Vector2(0.493333, 0.484444)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7dymd"]
+polygon = PackedVector2Array(76, -786, 78.5339, -75.8596, 80, 335, 92, 335)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_il3ub"]
+polygon = PackedVector2Array(678, 1, 678, 272, 668, 286, 652, 309, 642, 336, 634, 383, 630, 423, 628, 467, 716, 464, 716, 289, 685, 268)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mkaoo"]
+polygon = PackedVector2Array(276, -1, 278, 331, 483, 330, 486, 0)
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vi4dn")
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.5
+anchor_top = -0.5
+anchor_right = 1.5
+anchor_bottom = 1.5
+offset_left = 576.0
+offset_top = 324.0
+offset_right = -576.0
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3h6t3")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Day" type="Label" parent="."]
+layout_mode = 0
+offset_left = 870.0
+offset_top = 97.0
+offset_right = 1084.0
+offset_bottom = 140.0
+theme_override_fonts/font = ExtResource("3_ho0j1")
+theme_override_font_sizes/font_size = 40
+text = "Day 0"
+
+[node name="Earnings" type="Label" parent="."]
+layout_mode = 0
+offset_left = 894.0
+offset_top = 144.0
+offset_right = 980.0
+offset_bottom = 172.0
+theme_override_fonts/font = ExtResource("3_ho0j1")
+theme_override_font_sizes/font_size = 25
+text = "Earnings: "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_iq8ft")
+}
+
+[node name="temptimer" type="Label" parent="."]
+layout_mode = 0
+offset_left = 987.0
+offset_top = 173.0
+offset_right = 1090.0
+offset_bottom = 197.0
+theme_override_fonts/font = ExtResource("3_ho0j1")
+theme_override_font_sizes/font_size = 18
+
+[node name="light1" type="PointLight2D" parent="."]
+position = Vector2(117, -439)
+scale = Vector2(13.9298, 16.5315)
+energy = 1.17
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_jhgns")
+
+[node name="light2" type="PointLight2D" parent="."]
+position = Vector2(666, -488)
+scale = Vector2(13.9298, 16.5315)
+energy = 1.17
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_jhgns")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
+position = Vector2(602, 15)
+occluder = SubResource("OccluderPolygon2D_7dymd")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_7dymd")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_il3ub")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_mkaoo")
+
+[node name="Lightsoff" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_uy45k")
+expand_mode = 1
+
+[node name="Lightson" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_7a625")
+expand_mode = 1
+
+[node name="next" type="Button" parent="."]
+layout_mode = 0
+offset_left = 971.0
+offset_top = 454.0
+offset_right = 1146.0
+offset_bottom = 523.0
+text = "next
+"
+
+[node name="Laptop" type="Button" parent="."]
+layout_mode = 0
+offset_left = 830.0
+offset_top = 304.0
+offset_right = 908.0
+offset_bottom = 351.0
+flat = true
 
 [node name="gacha" type="Button" parent="."]
-offset_left = 1078.0
-offset_top = 1.0
-offset_right = 1143.0
-offset_bottom = 53.0
-text = "Gacha"
+layout_mode = 0
+offset_left = 735.0
+offset_top = 94.0
+offset_right = 801.0
+offset_bottom = 175.0
+flat = true
+
+[node name="ToyBox" type="Button" parent="."]
+modulate = Color(0.65098, 0.619608, 0.572549, 1)
+layout_mode = 0
+offset_left = 12.0
+offset_top = 315.0
+offset_right = 206.0
+offset_bottom = 451.0
+icon = ExtResource("5_5vsvq")
+flat = true
+expand_icon = true
+
+[node name="Label" type="Label" parent="ToyBox"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 78.0
+offset_right = 126.0
+offset_bottom = 106.0
+theme_override_colors/font_color = Color(0.411765, 0.203922, 0, 1)
+theme_override_fonts/font = ExtResource("3_ho0j1")
+theme_override_font_sizes/font_size = 25
+text = "Toy Box"
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
+
+[connection signal="pressed" from="next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="Laptop" to="." method="_on_laptop_pressed"]
+[connection signal="pressed" from="gacha" to="." method="_on_gacha_pressed"]
+[connection signal="pressed" from="ToyBox" to="." method="_on_toy_box_pressed"]

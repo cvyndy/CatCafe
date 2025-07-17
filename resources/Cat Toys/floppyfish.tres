@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GachaItem" load_steps=2 format=3 uid="uid://ippjm7u5lsl7"]
+
+[ext_resource type="Script" uid="uid://b1seyinob8tlr" path="res://resources/items.gd" id="1_vh3we"]
+
+[resource]
+script = ExtResource("1_vh3we")
+name = "floppyfish"
+type = "toy"
+rarity = "normal"
+probability = 0.25

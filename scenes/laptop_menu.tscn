@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://c6hf0xmcf7p8u"]
 
-[ext_resource type="Script" path="res://scripts/LaptopMenu.gd" id="1_bg1ju"]
-[ext_resource type="Texture2D" uid="uid://chkwltoo3ss0t" path="res://assets/vecteezy_browser-window-mockup-modern-internet-page_5429687.png" id="2_lkukt"]
+[ext_resource type="Script" uid="uid://cg8bht823gk84" path="res://scripts/LaptopMenu.gd" id="1_bg1ju"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u46kv"]
 
 [node name="LaptopMenu" type="Control"]
 layout_mode = 3
@@ -25,7 +26,7 @@ offset_right = 632.5
 offset_bottom = 368.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_lkukt")
+texture = SubResource("CompressedTexture2D_u46kv")
 expand_mode = 1
 
 [node name="exit" type="Button" parent="TextureRect"]
@@ -34,7 +35,6 @@ offset_left = 251.5
 offset_top = 138.0
 offset_right = 270.5
 offset_bottom = 158.0
-flat = true
 
 [node name="url" type="Label" parent="TextureRect"]
 layout_mode = 0
@@ -43,7 +43,6 @@ offset_top = 135.0
 offset_right = 865.5
 offset_bottom = 164.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "CatKart.org
-"
+text = "CatgirlsuwuGachanya.com"
 
 [connection signal="pressed" from="TextureRect/exit" to="." method="_on_exit_pressed"]
